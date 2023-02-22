@@ -8,11 +8,11 @@ const app = express();
 app.use(express.json());
 
 const { createUser } = require('./controllers/usersController');
-const { createAdd, getAdds } = require('./controllers/addsController');
+const { createAd, getAds } = require('./controllers/adsController');
 
 app.post('/api/user', createUser);
-app.post('/api/add', createAdd);
-app.get('/api/add', getAdds)
+app.post('/api/ad', createAd);
+app.get('/api/ad', getAds)
 
 app.listen(process.env.PORT, ()=> {
     console.log(`Server is running on PORT ${process.env.PORT}`)
